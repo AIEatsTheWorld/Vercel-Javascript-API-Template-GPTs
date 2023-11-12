@@ -1,0 +1,57 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Title",
+    "description": "API Description",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://your-api-server.com"
+    }
+  ],
+  "paths": {
+    "/your-endpoint": {
+      "post": {
+        "description": "Endpoint Description",
+        "operationId": "operationId",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "yourProperty": {
+                    "type": "string"
+                  }
+                },
+                "required": ["yourProperty"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success response description"
+          },
+          "400": {
+            "description": "Bad request description"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "YourResponseSchema": {
+        "type": "object",
+        "properties": {
+          "exampleProperty": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
